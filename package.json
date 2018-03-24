@@ -16,5 +16,8 @@
   },
   "author": "Ivan",
   "license": "1",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "owl.carousel": "^2.3.2"
+  }
 }
