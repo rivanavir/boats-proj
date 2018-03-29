@@ -24,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.boat-arrow-left-icon:before {
+  content: "\e903";
+}
+.boat-arrow-right-icon:before {
+  content: "\e907";
+}
+.boat-invalid-name-icon:before {
+  content: "\e904";
+}
+.boat-compass-icon:before {
+  content: "\e905";
+}
+.boat-sync-icon:before {
+  content: "\e906";
+}
 .boat-mouse-icon:before {
   content: "\e902";
 }

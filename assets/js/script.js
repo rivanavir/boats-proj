@@ -23,4 +23,42 @@ $(document).ready(function(){
     animationTime: 1000,
     showTime: 4000
   });
+
+  $('#boatDetailGallery').lightSlider({
+    gallery:true,
+    item:1,
+    // verticalHeight: 440,
+    height: 730,
+    thumbContHeight: 183,
+    thumbWidth: 235,
+    thumbHeight: 160,
+    thumbMargin: 0,
+    controls: false,
+    // loop:true,
+    // thumbItem:9,
+    // prevHtml:'<div class="circle-arrow left"><i class="boat-arrow-left-icon"></i></div>',
+    // nextHtml:'<div class="circle-arrow right"><i class="boat-arrow-right-icon"></i></div>',
+    addClass: 'boat-detail-wrap',
+    slideMargin:0,
+    enableDrag: false,
+    currentPagerPosition:'left',
+    onSliderLoad: function(el) {
+      let controlHtml = `<div class="circle-arrow left"><i class="boat-arrow-left-icon"></i></div>
+                          <div class="circle-arrow right"><i class="boat-arrow-right-icon"></i></div>`;
+      el.lightGallery({
+        selector: '#boatDetailGallery .lslide'
+      });
+
+      $('.boat-detail-wrap').append(controlHtml);
+      $('.boat-detail-wrap .circle-arrow').on('click', function(e){
+        e.preventDefault();
+        if($(this).hasClass('left')){
+          el.goToPrevSlide();
+        }
+        if($(this).hasClass('right')){
+          el.goToNextSlide();
+        }
+      });
+    }
+  });  
 });
