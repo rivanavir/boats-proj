@@ -18,6 +18,8 @@
   "license": "1",
   "private": true,
   "dependencies": {
+    "lightgallery": "^1.6.8",
+    "lightslider": "^1.1.6",
     "owl.carousel": "^2.3.2"
   }
 }

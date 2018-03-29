@@ -11,4 +11,16 @@ $(document).ready(function(){
     rewindNav : true
   });
   
+  // $("#featureCarouselWrap").cascadeSlider({
+      
+  // });
+  $("#featureCarouselWrap").carousel({
+    num: 7,
+    maxWidth: 1500,
+    maxHeight: 545,
+    distance: 50,
+    scale: 0.6,
+    animationTime: 1000,
+    showTime: 4000
+  });
 });

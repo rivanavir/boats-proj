@@ -38,15 +38,17 @@ $violet-txt: #606994;
 }
 header.main-header{
   position: relative;
-  height: 0;
+  // height: 0;
   .navbar-default{
-    background-color: transparent;
     border: 0;
-    top: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 300;
+    &.nav-homepage{
+      background-color: transparent;
+      top: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 300;
+    }
     .navbar-flex{
       display: flex;
       .navbar-header{
@@ -397,8 +399,6 @@ section{
         .btn-warning{
           border-radius: 96px;
           display: flex;
-          align-items: center;
-          display: flex;
           justify-content: center;
           align-items: center;
           padding: 11px 28px;
@@ -509,7 +509,7 @@ section{
   }
 }
 
-.future-boat-section{
+.feature-boat-section{
   background-color: #e9e9e9;
   padding: 47px 0 24px;
   .section-ttl-block{
@@ -529,9 +529,12 @@ section{
       }
     }
   }
-  .future-carousel-wrapper{
+  .feature-carousel-wrapper{
     padding: 45px 0;
     position: relative;
+    width: 100%;
+    height:545px;
+    margin:0 auto;
     &:before{
       position: absolute;
       content: '';
@@ -828,6 +831,396 @@ section{
       margin-bottom: 0;
       li{
         padding: 0 5px;
+      }
+    }
+  }
+}
+
+.contact-us-section{
+  .contact-main{
+    display: flex;
+    .side-info{
+      min-width: 342px;
+      background-color: #293152;
+      padding: 111px 40px 30px;
+      .side-ttl{
+        margin-bottom: 95px;
+        p{
+          font-size: 24px;
+          font-weight: 300;
+          line-height: 1.58;
+          letter-spacing: 1px;
+          color: #ffffff;
+          span{
+            font-size: 30px;
+            font-weight: normal;
+            line-height: 1.27;
+            color: #fdb200;
+          }
+        }
+      }
+      .side-links{
+        a{
+          margin-bottom: 5px;
+          font-size: 20px;
+          line-height: 1.65;
+          color: #e9e9e9;
+          display: block;
+          i.fa{
+            font-size: 18px;
+            color: #fdb200;
+          }
+          &.phone-link{
+            letter-spacing: 1.5px; 
+          }
+          &.email-link{
+            letter-spacing: 0.3px;
+
+          }
+        }
+      }
+    }
+    .form-wrap{
+      position: relative;
+      background: url('../image/port-bg.jpg') bottom center no-repeat;
+      background-size: cover;
+      padding: 94px 0 81px;
+      flex-grow: 1;
+      &:before{
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#2a3352, .86);
+        z-index: 5;
+      }
+      form.contact-form{
+        position: relative;
+        z-index: 10;
+        width: 75%;
+        .form-inner{
+          background-color: rgba(#e1e3e6,.63);
+          padding: 50px 45px 35px;
+          margin-bottom: 32px;
+          .form-group{
+            margin-bottom: 10px;
+            label{
+              font-size: 14px;
+              font-weight: 300;
+              color: #2a3352;
+            }
+            .form-control{
+              background-color: #f9f9f9;
+              box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+              border: 0;
+              border-radius: 0;
+              &:not(textarea){
+                height: 46px;
+              }
+            }
+            textarea.form-control{
+              height: 124px;
+            }
+          }
+        }
+        .btn-warning{
+          border-radius: 96px;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          padding: 10px 35px;
+          background-color: #fdb200;
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: 2px;
+          color: #242e49;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .contact-bottom{
+    width: 100%;
+    height: 87px;
+    background-color: #cdcfd5;
+    border-top: 17px solid white;
+  }
+}
+
+.book-appointment{
+  padding: 10px 0 49px;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  .back-layer{
+    display: flex;
+    position: absolute;
+    top: 58px;
+    right: 0;
+    bottom: 96px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    .left-layer{
+      min-width: 50%;
+      background-color: #cdcfd5;
+    }
+    .right-layer{
+      min-width: 50%;
+      background: url('../image/yaxty-port.jpg') bottom center no-repeat;
+      background-size: cover;
+      position: relative;
+      &:after{
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#2a3352,.57);
+      }
+    }
+  }
+  .book-main{
+    width: 565px;
+    height: 565px;
+    position: relative;
+    z-index: 100;
+    margin: 0 auto;
+    background: rgba(255,255,255,.45);
+    border-radius: 50% 50% 50% 0;
+    padding: 20px;
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      z-index: -1;
+      left: -125px;
+      top: -111px;
+      width: 565px;
+      height: 565px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,.2);
+    }
+    .book-inner{
+      background: #fff;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      padding-top: 68px;
+      .book-ttl{
+        font-size: 30px;
+        color: #2a3352;
+        text-transform: capitalize;
+      }
+      form.book-form{
+        padding: 25px;
+        .form-group{
+          text-align: center;
+          margin-bottom: 20px;
+          label{
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            color: #2e3558;
+          }
+          .form-control{
+            text-align: left;
+            border: 0;
+            height: 38px;
+            border-radius: 19.2px;
+            background-color: #e1e3e6;
+            box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+            @include inputPlacehoderColor(rgba(#2e3558,.5));
+            padding: 6px 20px;
+          }
+          .btn-warning{
+            border-radius: 96px;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 35px;
+            background-color: #fdb200;
+            font-size: 23px;
+            line-height: 1;
+            letter-spacing: 2.1px;
+            color: #2a3352;
+            display: inline-block;
+            font-weight: 500;
+            font-family: 'AvenirNext';
+          }
+          &.btn-wrap{
+            padding-top: 26px;
+          }
+        }
+      }
+    }
+    .book-circle-block{
+      position: absolute;
+      right: -145px;
+      width: 245px;
+      height: 245px;
+      border-radius: 50%;
+      background-color: rgba(#606994,.79);
+      padding: 30px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:after{
+        position: absolute;
+        content:'';
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 28px;
+        background-color: #f4f4f4;
+        z-index: 100;
+      }
+      p{
+        margin-bottom: 0;
+        font-size: 36px;
+        font-weight: 100;
+        color: #ffffff;
+        line-height: 1.3;
+        span{
+          font-family: 'HelveticaNeueRegular';
+          font-size: 30px;
+        }
+      }
+      span{
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+        line-height: 1.3;
+        &.last{
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.specification-sect{
+  padding-bottom: 26px;
+  background: #fff;
+  display: flex;
+  .spec-side{
+    min-width: 342px;
+    background-color: #293152;
+    padding: 15px 10px 15px 32px;
+    h3.main-ttl{
+      font-size: 30px;
+      letter-spacing: 1px;
+      text-align: left;
+      color: #ffffff;
+      padding-bottom: 10px;
+      position: relative;
+      &:after{
+        position: absolute;
+        content:'';
+        display: block;
+        width: 45px;
+        height: 1px;
+        background: #fdb200;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    h4.list-ttl{
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: #fdb200;
+    }
+    ul.spec-list{
+      margin-bottom: 20px;
+      li{
+        display: flex;
+        font-size: 14px;
+        color: #ffffff;
+        .spec-label{
+          min-width: 45%;
+          line-height: 1.43;
+          font-family: 'HelveticaNeueRegular';
+          text-align: left;
+          opacity: 0.8;
+        }
+        .info{
+          min-width: 55%;
+          padding-left: 15px;
+          line-height: 1.43;
+        }
+      }
+    }
+  }
+  .spec-main{
+    background-color: #f8f8f8;
+    .spec-column-block{
+      height: 820px;
+      columns: 4;
+      column-rule: 1px solid #cdcfd5;
+      padding: 10px 0 20px;
+      .col-inside{
+        padding: 15px 25px 65px;
+        h5.col-ttl{
+          font-size: 16px;
+          letter-spacing: 1px;
+          color: #2a3352;
+          position: relative;
+          padding-bottom: 13px;
+          margin-bottom: 16px;
+          &:after{
+            position: absolute;
+            content:'';
+            display: block;
+            height: 1px;
+            width: 42px;
+            background: #606994;
+            left: 0;
+            bottom: 0;
+          }
+        }
+        .col-txt{
+          p{
+            font-size: 14px;
+            line-height: 1.43;
+            color: #2a3352;
+            margin-bottom: 0;
+          }
+          &.style-txt{
+            p{
+              font-family: 'HelveticaNeueItalic';
+            }
+          }
+        }
+      }
+    }
+    .spec-bottom-block{
+      display: flex;
+      padding: 25px 20px;
+      background: #fff;
+      .bottom-ttl{
+        padding: 0 20px;
+        font-size: 30px;
+        color: #2a3352;
+        border-right: 1px solid #2a3352;
+        line-height: 1.2;
+      }
+      .bottom-txt{
+        padding: 10px 30px;
+        p{
+          margin-bottom: 0;
+          font-size: 16px;
+          line-height: 1.63;
+          color: #2a3352;
+        }
       }
     }
   }
