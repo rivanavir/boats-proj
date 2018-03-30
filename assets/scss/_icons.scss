@@ -24,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.boat-grid-icon-1:before {
+  content: "\e900";
+}
+.boat-grid-icon:before {
+  content: "\e90a";
+}
+.boat-close-icon:before {
+  content: "\e90b";
+}
+.boat-filter-icon:before {
+  content: "\e908";
+}
+.boat-menu-icon:before {
+  content: "\e909";
+}
 .boat-arrow-left-icon:before {
   content: "\e903";
 }
@@ -45,6 +60,6 @@
 .boat-boat-icon:before {
   content: "\e901";
 }
-.boat-seach-icon:before {
-  content: "\e900";
+.boat-search:before {
+  content: "\e986";
 }

@@ -60,5 +60,30 @@ $(document).ready(function(){
         }
       });
     }
-  });  
+  });
+  
+  // range slider
+  var priceSlider = document.getElementById('priceRangeSlider');
+
+  noUiSlider.create(priceSlider, {
+    start: [ 299, 2299 ],
+    connect: true,
+    step: 1,
+    range: {
+      'min': 0,
+      'max': 3000
+    }
+  });
+
+  var paddingMin = document.getElementById('sliderValueMin'),
+      paddingMax = document.getElementById('sliderValueMax');
+
+  priceSlider.noUiSlider.on('update', function ( values, handle ) {
+    if ( handle ) {
+      paddingMax.value = values[handle];
+    } else {
+      paddingMin.value = values[handle];
+    }
+  });
+
 });

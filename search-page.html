@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="/node_modules/lightgallery/dist/css/lightgallery.min.css" />
+  <link rel="stylesheet" href="/node_modules/lightslider/dist/css/lightslider.min.css" />
+  <link rel="stylesheet" href="/node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+  <link rel="stylesheet" href="/node_modules/nouislider/distribute/nouislider.min.css" />
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Boats - search page</title>
+</head>
+<body>
+  
+  <div class="main-wrapper">
+    <header class="main-header">
+      <nav class="navbar navbar-default">
+        <div class="navbar-flex">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img class="logo" src="./assets/image/logo.svg" alt="logo">
+            </a>
+          </div>
+
+          <div class="head-sale-info">
+            <div class="label-tag">197</div>
+            <span class="txt">Boats for Sale!</span>
+          </div>
+
+          <div class="head-search-block">
+            <div class="search-inner">
+              <input type="text" placeholder="manufacture, model or type ...">
+              <a href="#" class="search-btn">
+                <i class="boat-search"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="head-home-link">
+            <a href="/">Home</a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>      
+    </header>
+  
+    <div class="main-search-wrapper">
+      <div class="search-sidebar mCustomScrollbar">
+        <div class="side-top-block">
+          <h3 class="side-ttl">Refine<br>Search</h3>
+          <div class="side-controls">
+            <a href="#" class="close-link">
+              <i class="boat-close-icon"></i>
+            </a>
+            <a href="#" class="reset-all">Reset All</a>
+          </div>
+        </div>
+        <div class="side-main">
+          <div class="check-btn-wrap">
+            <button class="btn btn-default current">All</button>
+            <button class="btn btn-default">New</button>
+            <button class="btn btn-default">Used</button>
+          </div>
+          <div class="side-collapse-wrap">
+            <div class="collapse-toggler" type="button" data-toggle="collapse" data-target="#boatTypes" aria-expanded="false" aria-controls="boatTypes">
+              <span>Boat Types</span>
+              <div class="caret-wrap">
+                <i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse collapse-wrap" id="boatTypes">
+              <div class="collapse-inner">
+                boat types
+              </div>
+            </div>
+            <div class="collapse-toggler" type="button" data-toggle="collapse" data-target="#priceItem" aria-expanded="false" aria-controls="priceItem">
+              <span>Price</span>
+              <div class="caret-wrap">
+                <i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse collapse-wrap" id="priceItem">
+              <div class="collapse-inner">
+                <div class="range-input-row">
+                  <input type="text" id="sliderValueMin">
+                  <span class="div"></span>
+                  <input type="text" id="sliderValueMax">
+                  <div class="custom-select transp">
+                    <i class="fa fa-caret-down"></i>
+                    <select name="currency" id="currency">
+                      <option value="eur">Eur</option>
+                      <option value="usd">USD</option>
+                    </select>
+                  </div>
+                </div>
+              <div id="priceRangeSlider" class="price-range-slider"></div>
+              </div>
+            </div>
+            <div class="collapse-toggler" type="button" data-toggle="collapse" data-target="#yearItem" aria-expanded="false" aria-controls="yearItem">
+              <span>Year</span>
+              <div class="caret-wrap">
+                <i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse collapse-wrap" id="yearItem">
+              <div class="collapse-inner">
+                <div class="range-input-row">
+                  <input type="number" id="yearValueMax" value="1990">
+                  <span class="div"></span>
+                  <input type="number" id="yearValueMax" value="2018">
+                  <span class="txt">Years</span>
+                </div>
+              </div>
+            </div>
+            <div class="collapse-toggler" type="button" data-toggle="collapse" data-target="#manufacturerItem" aria-expanded="false" aria-controls="manufacturerItem">
+              <span>Manufacturer</span>
+              <div class="caret-wrap">
+                <i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse collapse-wrap" id="manufacturerItem">
+              <div class="collapse-inner">
+                <div class="custom-select">
+                  <i class="fa fa-caret-down"></i>
+                  <select name="man" id="manufacturer">
+                    <option value="">Add</option>
+                    <option value="option">Option</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="collapse-toggler" type="button" data-toggle="collapse" data-target="#modelItem" aria-expanded="false" aria-controls="modelItem">
+              <span>Model</span>
+              <div class="caret-wrap">
+                <i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse collapse-wrap" id="modelItem">
+              <div class="collapse-inner">
+                some inner txt
+              </div>
+            </div>
+            <div class="collapse-toggler" type="button" data-toggle="collapse" data-target="#locationItem" aria-expanded="false" aria-controls="locationItem">
+              <span>Location</span>
+              <div class="caret-wrap">
+                <i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse collapse-wrap" id="locationItem">
+              <div class="collapse-inner">
+                <div class="checkbox-line">
+                  <input type="checkbox" disabled="disabled" id="check_1">
+                  <label for="check_1">Essex Marina</label>
+                </div>
+                <div class="checkbox-line">
+                  <input type="checkbox" id="check_2" checked="checked">
+                  <label for="check_2">Marina Poole</label>
+                </div>
+                <div class="checkbox-line">
+                  <input type="checkbox" disabled="disabled" id="check_3">
+                  <label for="check_3">Cala d’or </label>
+                </div>
+                <div class="checkbox-line">
+                  <input type="checkbox" id="check_4">
+                  <label for="check_4">Denia</label>
+                </div>
+              </div>
+            </div>
+            <div class="collapse-toggler" type="button" data-toggle="collapse" data-target="#otherItem" aria-expanded="false" aria-controls="otherItem">
+              <span>Other</span>
+              <div class="caret-wrap">
+                <i class="fa fa-caret-down"></i>
+              </div>
+            </div>
+            <div class="collapse collapse-wrap" id="otherItem">
+              <div class="collapse-inner">
+                some inner txt
+              </div>
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <button class="btn btn-warning">
+              <span>Search</span>
+              <i class="boat-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="search-result-block mCustomScrollbar">
+
+      </div>
+    </div>
+  </div>
+  
+  <footer class="main-footer">
+    <div class="foot-inner">
+      <div class="foot-flex"><p class="copyright">&copy; <b>Boats.co.uk.</b> All right reserved.</p></div>
+      <div class="foot-flex">
+        <ul class="foot-nav">
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Site Map</a></li>
+        </ul>
+      </div>
+      <div class="foot-flex">
+        <ul class="soc-link">
+          <li>
+            <h4 class="soc-ttl">Follow us:</h4>
+          </li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="/node_modules/lightslider/dist/js/lightslider.min.js"></script>
+  <script src="/node_modules/lightgallery/dist/js/lightgallery.min.js"></script>
+  <script src="/node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+  <script src="/node_modules/nouislider/distribute/nouislider.min.js"></script>
+
+  <script src="./assets/js/script.js"></script>
+
+  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+
+</body>
+</html>
