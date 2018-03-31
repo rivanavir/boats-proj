@@ -35,7 +35,21 @@ $(document).ready(function(){
     thumbMargin: 0,
     controls: false,
     // loop:true,
-    // thumbItem:9,
+    thumbItem:9,
+    responsive : [
+      {
+        breakpoint:991,
+        settings: {
+          thumbItem:6
+        }
+      },
+      {
+        breakpoint:575,
+        settings: {
+          thumbItem:4
+        }
+      }
+    ],
     // prevHtml:'<div class="circle-arrow left"><i class="boat-arrow-left-icon"></i></div>',
     // nextHtml:'<div class="circle-arrow right"><i class="boat-arrow-right-icon"></i></div>',
     addClass: 'boat-detail-wrap',

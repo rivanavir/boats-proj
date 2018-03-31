@@ -1070,6 +1070,10 @@ section{
   .detail-gallery-inner{
     .detail-gallery-block{
       position: relative;
+      @media(max-width:1024px){
+        padding-top: 54px;
+        background-color: #fff;
+      }
       .counter{
         left: 17px;
         top: 68%;
@@ -1152,7 +1156,7 @@ section{
         color: #2a3253;
         text-transform: capitalize;
         font-family: 'HelveticaNeueItalic';
-        @media(max-width:767px){
+        @media(max-width:1024px){
           position: absolute;
           right: 0;
           top: 18px;
@@ -1171,6 +1175,17 @@ section{
         overflow-x: auto;
         @media(max-width:1330px){
           height: 440px;
+        }
+        @media(max-width:1130px){
+          padding: 15px 0 15px 15px;
+        }
+        @media(max-width:1024px){
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+        @media(max-width:575px){
+          // height: 214px;
         }
         .det-txt-top{
           display: flex;
@@ -1192,6 +1207,9 @@ section{
         }
         .det-txt{
           padding: 0 55px 20px 0;
+          @media(max-width:1250px){
+            padding: 0 0 10px 0;
+          }
           h3.txt-ttl{
             font-size: 36px;
             color: white;
@@ -1289,12 +1307,25 @@ section{
             @media(max-width:1330px){
               height: 440px;
             }
+            @media(max-width:1024px){
+              width: 100%;
+              height: 500px;
+            }
+            @media(max-width:991px){
+              height: 340px;
+            }
+            @media(max-width:575px){
+              height: 214px;
+            }
           }
         }
       }
       ul.lSPager{
         display: flex;
         margin-top: 23px !important;
+        @media(max-width:991px){
+          margin-top: 12px !important;
+        }
         li{
           position: relative;
           align-items: stretch;
@@ -1316,6 +1347,12 @@ section{
           &:after{
             width: 17px;
             background: rgba(255,255,255,.5);
+            @media(max-width:768px){
+              width: 15px;
+            }
+            @media(max-width:575px){
+              width: 8px;
+            }
           }
           a{
             img{
@@ -1638,6 +1675,9 @@ section{
   padding-bottom: 26px;
   background: #fff;
   display: flex;
+  @media(max-width:767px){
+    flex-direction: column;
+  }
   .spec-side{
     min-width: 342px;
     background-color: #293152;
@@ -1689,12 +1729,33 @@ section{
   .spec-main{
     background-color: #f8f8f8;
     .spec-column-block{
-      height: 820px;
+      min-height: 820px;
       columns: 4;
       column-rule: 1px solid #cdcfd5;
       padding: 10px 0 20px;
+      @media(max-width:1330px){
+        columns: 3;
+      }
+      @media(max-width:1170px){
+        columns: 2;
+      }
+      @media(max-width:991px){
+        columns: 2;
+      }
+      @media(max-width:991px){
+        columns: 1;
+      }
+      @media(max-width:767px){
+        columns: 2;
+      }
+      @media(max-width:575px){
+        columns: 1;
+      }
       .col-inside{
         padding: 15px 25px 65px;
+        @media(max-width:767px){
+          padding: 15px 15px 30px;
+        }
         h5.col-ttl{
           font-size: 16px;
           letter-spacing: 1px;
@@ -1732,15 +1793,40 @@ section{
       display: flex;
       padding: 25px 20px;
       background: #fff;
+      @media(max-width:991px){
+        padding: 15px;
+        flex-direction: column;
+      }
       .bottom-ttl{
         padding: 0 20px;
         font-size: 30px;
         color: #2a3352;
         border-right: 1px solid #2a3352;
         line-height: 1.2;
+        @media(max-width:991px){
+          padding: 0 0 10px;
+          border-right: 0;
+          position: relative;
+          br{
+            display: none;
+          }
+          &:after{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 45px;
+            height: 1px;
+            background: #fdb200;
+            bottom: 0;
+            left: 0;
+          }
+        }
       }
       .bottom-txt{
         padding: 10px 30px;
+        @media(max-width:991px){
+          padding: 10px 0;
+        }
         p{
           margin-bottom: 0;
           font-size: 16px;
