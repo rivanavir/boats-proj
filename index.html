@@ -7,9 +7,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="./assets/css/jquery.hislide.min.css">
+  <link rel="stylesheet" href="/node_modules/lightgallery/dist/css/lightgallery.min.css" />
+  <link rel="stylesheet" href="/node_modules/lightslider/dist/css/lightslider.min.css" />
+  <link rel="stylesheet" href="/node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+  <link rel="stylesheet" href="/node_modules/nouislider/distribute/nouislider.min.css" />
+  <link rel="stylesheet" href="./assets/css/animated-slider.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Boats - home page</title>
+
+  <style type="text/css">
+
+    .choose_slider_items .controls{
+      position: relative;
+      z-index: 500;
+    }
+  </style>
+  
+  
 </head>
 <body>
   
@@ -238,7 +252,7 @@
       </div>
     </div>
 
-    <section class="feature-boat-section">
+    <!-- <section class="feature-boat-section">
       <div class="section-ttl-block with-bg">
         <div class="ttl-inner">
           Featured<br>Boats
@@ -253,9 +267,9 @@
           </div>
         </div>
       </div>
-      <div class="feature-carousel-wrapper" id="featureCarouselWrap">
-        <ul>
-          <li>
+      <div class="feature-carousel-wrapper choose_slider_items">
+        <ul id="featureCarouselWrap">
+          <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
                 <div class="block-inner">
@@ -271,7 +285,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
                 <div class="block-inner">
@@ -287,7 +301,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
                 <div class="block-inner">
@@ -303,7 +317,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
                 <div class="block-inner">
@@ -319,7 +333,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
                 <div class="block-inner">
@@ -335,7 +349,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
                 <div class="block-inner">
@@ -351,7 +365,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
                 <div class="block-inner">
@@ -367,7 +381,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
                 <div class="block-inner">
@@ -383,7 +397,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
                 <div class="block-inner">
@@ -400,8 +414,10 @@
             </div>
           </li>
         </ul>
+        <div class="controls"><a id="btn_next2" href="#">Next</a></div>
+        <div class="controls"><a id="btn_prev2" href="#">Previous</a></div>
       </div>
-    </section>
+    </section> -->
     
     <section class="our-brand">
       <div class="our-brand-inner">
@@ -439,7 +455,7 @@
     <section class="recent-tweet-section">
       <div class="section-ttl-block with-bg">
         <div class="ttl-inner">
-          Recent<br>tweets
+          Recent<br> tweets
         </div>
       </div>
       <div class="absolute-view-link">
@@ -558,46 +574,55 @@
     
     <section class="bottom-block-wrapper">
       <div class="bottom-block-inner">
-        <div class="circle-figure-block">
-          <div class="block-figure">
-            <div class="block-inner">
-              <div class="img-wrap">
-                <img src="./assets/image/yaxty-port-more-odessa.jpg" alt="photo">
-              </div>
-              <div class="bottom-layer cover-img main-bg">
-                <h3 class="txt">Join us!</h3>
-              </div>
-              <div class="center-info">
-                <img src="./assets/image/yacht-club-logo.png" alt="label">
+        <div class="circle-figure-wrap join-us">
+          <h3 class="mobile-txt">Join us!</h3>
+          <div class="circle-figure-block">
+            <div class="block-figure">
+              <div class="block-inner">
+                <div class="img-wrap">
+                  <img src="./assets/image/yaxty-port-more-odessa.jpg" alt="photo">
+                </div>
+                <div class="bottom-layer cover-img main-bg">
+                  <h3 class="txt">Join us!</h3>
+                </div>
+                <div class="center-info">
+                  <img src="./assets/image/yacht-club-logo.png" alt="label">
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="circle-figure-block">
-          <div class="block-figure">
-            <div class="block-inner">
-              <div class="img-wrap">
-                <img src="./assets/image/testimonial-kevin-lewis.jpg" alt="photo">
+        <div class="circle-figure-wrap testimonial">
+          <h3 class="mobile-txt">Testimonials</h3>
+          <div class="circle-figure-block">
+            <div class="block-figure">
+              <div class="block-inner">
+                <div class="img-wrap">
+                  <img src="./assets/image/testimonial-kevin-lewis.jpg" alt="photo">
+                </div>
+                <div class="bottom-layer brown-bg">
+                  <h3 class="txt">Testimonials</h3>
+                  <i class="fa fa-comments"></i>
+                </div>
+                <div class="center-info"></div>
               </div>
-              <div class="bottom-layer brown-bg">
-                <h3 class="txt">Testimonials</h3>
-                <i class="fa fa-comments"></i>
-              </div>
-              <div class="center-info"></div>
             </div>
           </div>
         </div>
-        <div class="circle-figure-block">
-          <div class="block-figure">
-            <div class="block-inner">
-              <div class="img-wrap">
-                <img src="./assets/image/dwyw-evu-ws-aa-6-wt.jpg" alt="photo">
+        <div class="circle-figure-wrap video_guide">
+          <h3 class="mobile-txt">Videos & Guides</h3>
+          <div class="circle-figure-block">
+            <div class="block-figure">
+              <div class="block-inner">
+                <div class="img-wrap">
+                  <img src="./assets/image/dwyw-evu-ws-aa-6-wt.jpg" alt="photo">
+                </div>
+                <div class="bottom-layer main-light-bg">
+                  <h3 class="txt">Videos & Guides</h3>
+                  <i class="fa fa-youtube-play"></i>
+                </div>
+                <div class="center-info"></div>
               </div>
-              <div class="bottom-layer main-light-bg">
-                <h3 class="txt">Videos & Guides</h3>
-                <i class="fa fa-youtube-play"></i>
-              </div>
-              <div class="center-info"></div>
             </div>
           </div>
         </div>
@@ -618,6 +643,18 @@
   </div>
   
   <footer class="main-footer">
+    <div class="soc-wrapper">
+      <div class="side-links">
+        <a class="phone-link" href="callto:+34606396500"><i class="fa fa-phone"></i>&nbsp;<span>+34 606 396 500</span></a>
+        <a class="email-link" href="mailto:sales@boats.co.uk"><i class="fa fa-envelope-open"></i>&nbsp;<span>sales@boats.co.uk</span></a>
+      </div>
+      <ul class="soc-link">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+      </ul>
+    </div>
     <div class="foot-inner">
       <div class="foot-flex"><p class="copyright">&copy; <b>Boats.co.uk.</b> All right reserved.</p></div>
       <div class="foot-flex">
@@ -630,15 +667,14 @@
       </div>
       <div class="foot-flex">
         <ul class="soc-link">
-          <li>
-            <h4 class="soc-ttl">Follow us:</h4>
+          <li class="soc-ttl">
+            <h4>Follow us:</h4>
           </li>
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
           <li><a href="#"><i class="fa fa-instagram"></i></a></li>
           <li><a href="#"><i class="fa fa-youtube"></i></a></li>
         </ul>
-        
       </div>
     </div>
   </footer>
@@ -646,7 +682,13 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="./assets/js/Carousel.js"></script>
+  <script src="/node_modules/lightslider/dist/js/lightslider.min.js"></script>
+  <script src="/node_modules/lightgallery/dist/js/lightgallery.min.js"></script>
+
+  <script src="/node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+  <script src="/node_modules/nouislider/distribute/nouislider.min.js"></script>
+  <!-- <script src="./assets/js/Carousel.js"></script> -->
+  <script src="./assets/js/jquery.cssslider.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -2,27 +2,54 @@ $(document).ready(function(){
   
   $('#recentCarousel').owlCarousel({
     center: true,
-    items:4,
+    // items:1,
     loop: true,
     margin:26,
     nav: true,
-    // navText: 'asdf',
     navText : ["",""],
-    rewindNav : true
+    rewindNav : true,
+    responsive:{
+      0:{
+        items:1,
+        margin:0  
+      },
+      768:{
+        items:2,
+        margin: 15 
+      },
+      992:{
+        items:4
+      }
+    }
   });
   
   // $("#featureCarouselWrap").cascadeSlider({
       
   // });
-  $("#featureCarouselWrap").carousel({
-    num: 7,
-    maxWidth: 1500,
-    maxHeight: 545,
-    distance: 50,
-    scale: 0.6,
-    animationTime: 1000,
-    showTime: 4000
+  // $("#featureCarouselWrap").
+
+  $("#featureCarouselWrap").AnimatedSlider( { 
+    prevButton: "#btn_prev2", 
+    nextButton: "#btn_next2",
+    visibleItems: 7,
+    infiniteScroll: true,
+    // willChangeCallback: function(obj, item) {
+    //   $("#statusText").text("Will change to " + item);
+    // },
+    // changedCallback: function(obj, item) {
+    //   $("#statusText").text("Changed to " + item);
+    // }
   });
+  
+  // $("#featureCarouselWrap").carousel({
+  //   num: 7,
+  //   maxWidth: 545,
+  //   maxHeight: 545,
+  //   distance: 200,
+  //   scale: 0.6,
+  //   animationTime: 1000,
+  //   showTime: 4000
+  // });
 
   $('#boatDetailGallery').lightSlider({
     gallery:true,
@@ -85,28 +112,31 @@ $(document).ready(function(){
   });
   
   // range slider
-  var priceSlider = document.getElementById('priceRangeSlider');
+  if($('#priceRangeSlider')){
 
-  noUiSlider.create(priceSlider, {
-    start: [ 299, 2299 ],
-    connect: true,
-    step: 1,
-    range: {
-      'min': 0,
-      'max': 3000
-    }
-  });
-
-  var paddingMin = document.getElementById('sliderValueMin'),
-      paddingMax = document.getElementById('sliderValueMax');
-
-  priceSlider.noUiSlider.on('update', function ( values, handle ) {
-    if ( handle ) {
-      paddingMax.value = values[handle];
-    } else {
-      paddingMin.value = values[handle];
-    }
-  });
+    // var priceSlider = document.getElementById('priceRangeSlider');
+    
+    // noUiSlider.create(priceSlider, {
+    //   start: [ 299, 2299 ],
+    //   connect: true,
+    //   step: 1,
+    //   range: {
+    //     'min': 0,
+    //     'max': 3000
+    //   }
+    // });
+    
+    // var paddingMin = document.getElementById('sliderValueMin'),
+    // paddingMax = document.getElementById('sliderValueMax');
+    
+    // priceSlider.noUiSlider.on('update', function ( values, handle ) {
+    //   if ( handle ) {
+    //     paddingMax.value = values[handle];
+    //   } else {
+    //     paddingMin.value = values[handle];
+    //   }
+    // });
+  }
 
   $('.search-res-carousel').lightSlider({
     item:1,
