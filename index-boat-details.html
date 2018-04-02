@@ -23,14 +23,15 @@
         <div class="navbar-flex">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false">
+              <span>
+                <i class="boat-menu-icon"></i>
+                <i class="boat-close-icon"></i>
+              </span>
             </button>
             <a class="navbar-brand" href="#">
               <img class="logo" src="./assets/image/logo.svg" alt="logo">
+              <img class="logo-text" src="./assets/image/combined-shape.svg" alt="logo text">
             </a>
           </div>
 
@@ -53,12 +54,46 @@
           </div>
       
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+          <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+            <ul class="nav navbar-nav desktop-nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#">About us</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
+            <!-- mobile menu -->
+            <div class="mobile-nav">
+              <div class="menu-ttl">Services</div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">
+                  <i class="fa fa-calendar-o"></i>
+                  <span>Charter</span>
+                </a></li>
+                <li><a href="#">
+                  <i class="fa fa-anchor"></i>
+                  <span>Moorings</span>
+                </a></li>
+                <li><a href="#">
+                  <i class="fa fa-tag"></i>
+                  <span>Sell boat</span>
+                </a></li>
+                <li><a href="#">
+                  <i class="fa fa-youtube-play"></i>
+                  <span>Videos</span>
+                </a></li>
+                <li><a href="#">
+                  <i class="fa fa-pie-chart"></i>
+                  <span>Finance</span>
+                </a></li>
+                <li><a href="#">
+                  <i class="fa fa-check-square"></i>
+                  <span>Suppliers</span>
+                </a></li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn btn-default">About us</a>
+                <a href="#" class="btn btn-default">Contact us</a>
+              </div>
+            </div>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>      
@@ -75,7 +110,7 @@
               <span>Back</span>
             </a>
           </div>
-          <div class="pending-label hidden-md hidden-lg">Sale pending</div>
+          <div class="pending-label">Sale pending</div>
           <ul class="boat-detail-gallery" id="boatDetailGallery">
             <li data-thumb="./assets/image/detail/image-thumb-1.jpg" data-src="./assets/image/detail/image-1.jpg">
               <img src="./assets/image/detail/image-1.jpg" />
@@ -114,15 +149,15 @@
               <img src="./assets/image/detail/image-6.jpg" />
             </li>
           </ul>
-          <div class="counter">
+          <!-- <div class="counter">
             <span class="current"></span><span class="total"></span>
-          </div>
+          </div> -->
           <div class="detail-txt-block">
             <div class="det-txt-top">
               <div class="year">2010</div>
               <div class="price">
                 <div class="count">£ 649.950</div>
-                <div class="pending-label hidden-sm hidden-xs">Sale pending</div>
+                <div class="pending-label">Sale pending</div>
               </div>
             </div>
             <div class="det-txt">
@@ -414,7 +449,7 @@
           <div class="book-ttl">Book an appointment</div>
           <form action="/" class="book-form">
             <div class="row">
-              <div class="col-md-8 col-md-offset-2">
+              <div class="col-sm-8 col-sm-offset-2">
                 <div class="form-group">
                   <label>Name</label>
                   <input type="text" class="form-control" placeholder="Your name">
@@ -422,13 +457,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="form-group">
                   <label>Phone</label>
                   <input type="text" class="form-control" placeholder="Phone">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="form-group">
                   <label>Email</label>
                   <input type="email" class="form-control" placeholder="Email">
@@ -436,13 +471,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-4 col-md-offset-2">
+              <div class="col-sm-4 col-sm-offset-2">
                 <div class="form-group">
                   <label>Date of Visit</label>
                   <input type="datepicker" class="form-control" placeholder="Date">
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-sm-4">
                 <div class="form-group">
                   <label>Time of Visit</label>
                   <input type="timepicker" class="form-control" placeholder="Time">
@@ -512,6 +547,18 @@
   </div>
   
   <footer class="main-footer">
+    <div class="soc-wrapper">
+      <div class="side-links">
+        <a class="phone-link" href="callto:+34606396500"><i class="fa fa-phone"></i>&nbsp;<span>+34 606 396 500</span></a>
+        <a class="email-link" href="mailto:sales@boats.co.uk"><i class="fa fa-envelope-open"></i>&nbsp;<span>sales@boats.co.uk</span></a>
+      </div>
+      <ul class="soc-link">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+      </ul>
+    </div>
     <div class="foot-inner">
       <div class="foot-flex"><p class="copyright">&copy; <b>Boats.co.uk.</b> All right reserved.</p></div>
       <div class="foot-flex">
@@ -524,15 +571,14 @@
       </div>
       <div class="foot-flex">
         <ul class="soc-link">
-          <li>
-            <h4 class="soc-ttl">Follow us:</h4>
+          <li class="soc-ttl">
+            <h4>Follow us:</h4>
           </li>
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
           <li><a href="#"><i class="fa fa-instagram"></i></a></li>
           <li><a href="#"><i class="fa fa-youtube"></i></a></li>
         </ul>
-        
       </div>
     </div>
   </footer>
