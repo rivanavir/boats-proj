@@ -1,8 +1,20 @@
 $(document).ready(function(){
   
+  // custom scroll
+  let getSroll = function(){
+    if($(window).outerWidth() > 991){
+      $('.search-res-wrapper').mCustomScrollbar();
+    } else{
+      $('.search-res-wrapper').mCustomScrollbar('destroy');
+    }
+  };
+  getSroll();
+  $(window).resize(function(){
+    getSroll();
+  });
+
   $('#recentCarousel').owlCarousel({
     center: true,
-    // items:1,
     loop: true,
     margin:26,
     nav: true,
@@ -23,35 +35,23 @@ $(document).ready(function(){
     }
   });
   
-  // $("#featureCarouselWrap").cascadeSlider({
-      
-  // });
-  // $("#featureCarouselWrap").
 
   $("#featureCarouselWrap").AnimatedSlider( { 
     prevButton: "#btn_prev2", 
     nextButton: "#btn_next2",
     visibleItems: 7,
     infiniteScroll: true,
-    // willChangeCallback: function(obj, item) {
-    //   $("#statusText").text("Will change to " + item);
-    // },
-    // changedCallback: function(obj, item) {
-    //   $("#statusText").text("Changed to " + item);
-    // }
   });
   
   $('#boatDetailGallery').lightSlider({
     gallery:true,
     item:1,
-    // verticalHeight: 440,
     height: 730,
     thumbContHeight: 183,
     thumbWidth: 235,
     thumbHeight: 160,
     thumbMargin: 0,
     controls: false,
-    // loop:true,
     thumbItem:9,
     responsive : [
       {
@@ -105,28 +105,28 @@ $(document).ready(function(){
   // range slider
   if($('#priceRangeSlider')){
 
-    // var priceSlider = document.getElementById('priceRangeSlider');
+    var priceSlider = document.getElementById('priceRangeSlider');
     
-    // noUiSlider.create(priceSlider, {
-    //   start: [ 299, 2299 ],
-    //   connect: true,
-    //   step: 1,
-    //   range: {
-    //     'min': 0,
-    //     'max': 3000
-    //   }
-    // });
+    noUiSlider.create(priceSlider, {
+      start: [ 299, 2299 ],
+      connect: true,
+      step: 1,
+      range: {
+        'min': 0,
+        'max': 3000
+      }
+    });
     
-    // var paddingMin = document.getElementById('sliderValueMin'),
-    // paddingMax = document.getElementById('sliderValueMax');
+    var paddingMin = document.getElementById('sliderValueMin'),
+    paddingMax = document.getElementById('sliderValueMax');
     
-    // priceSlider.noUiSlider.on('update', function ( values, handle ) {
-    //   if ( handle ) {
-    //     paddingMax.value = values[handle];
-    //   } else {
-    //     paddingMin.value = values[handle];
-    //   }
-    // });
+    priceSlider.noUiSlider.on('update', function ( values, handle ) {
+      if ( handle ) {
+        paddingMax.value = values[handle];
+      } else {
+        paddingMin.value = values[handle];
+      }
+    });
   }
 
   $('.search-res-carousel').lightSlider({
