@@ -32,8 +32,8 @@ $violet-txt: #606994;
 
 // main -wrapper
 .main-wrapper{
-  min-height: 100vh;
   @media(min-width: 992px){
+    min-height: 100vh;
     padding-bottom: 100px;
     margin-bottom: -100px;
   }
@@ -1754,6 +1754,10 @@ section{
           align-items: center;
           text-decoration: none;
           padding: 9px 20px 6px 20px;
+          @media(max-width:414px){
+            width: 90px;
+            padding: 9px 0 6px 10px;
+          }
           .circle-arrow{
           }
           span{
@@ -1780,7 +1784,7 @@ section{
           display: block;
           position: absolute;
           right: 0;
-          top: 18px;
+          top: 14px;
           z-index: 500;
         }
       }
@@ -2160,12 +2164,20 @@ section{
 .contact-us-section{
   .contact-main{
     display: flex;
+    @media(max-width:991px){
+      flex-direction: column;
+    }
     .side-info{
       min-width: 342px;
       background-color: #293152;
       padding: 111px 40px 30px;
+      @media(max-width: 991px){
+        padding: 45px 20px 23px;
+      }
       .side-ttl{
-        margin-bottom: 95px;
+        @media(min-width: 992px){
+          margin-bottom: 95px;
+        }
         p{
           font-size: 24px;
           font-weight: 300;
@@ -2180,6 +2192,11 @@ section{
           }
         }
       }
+      .side-links{
+        @media(max-width: 991px){
+          display: none;
+        }
+      }
     }
     .form-wrap{
       position: relative;
@@ -2187,6 +2204,9 @@ section{
       background-size: cover;
       padding: 94px 0 81px;
       flex-grow: 1;
+      @media(max-width: 991px){
+        padding: 20px 20px 35px;
+      }
       &:before{
         position: absolute;
         content: '';
@@ -2204,10 +2224,19 @@ section{
         position: relative;
         z-index: 10;
         width: 75%;
+        @media(max-width: 991px){
+          margin: 0 auto;
+        }
+        @media(max-width: 767px){
+          width: auto;
+        }
         .form-inner{
           background-color: rgba(#e1e3e6,.63);
           padding: 50px 45px 35px;
           margin-bottom: 32px;
+          @media(max-width: 767px){
+            padding: 30px 10px 30px;
+          }
           .form-group{
             margin-bottom: 10px;
             label{
@@ -2241,6 +2270,10 @@ section{
           letter-spacing: 2px;
           color: #242e49;
           display: inline-block;
+          @media(max-width: 991px){
+            margin: 0 auto;
+            display: block;
+          }
         }
       }
     }
@@ -2250,6 +2283,9 @@ section{
     height: 87px;
     background-color: #cdcfd5;
     border-top: 17px solid white;
+    @media(max-width:991px){
+      display: none;
+    }
   }
 }
 
@@ -2258,7 +2294,9 @@ section{
   background-color: #f4f4f4;
   overflow: hidden;
   @media(max-width:767px){
-    padding: 18px 0 49px;
+    border-top: 18px solid #f4f4f4;
+    padding: 0 0 30px;
+    background-color: #fff;
   }
   .back-layer{
     display: flex;
@@ -2270,13 +2308,16 @@ section{
     width: 100%;
     z-index: 10;
     @media(max-width:767px){
-      top: 18px;
+      top: 0;
     }
     .left-layer{
       min-width: 50%;
       background-color: #cdcfd5;
       @media(max-width:767px){
-        min-width: 75%;
+        min-width: 255px;
+      }
+      @media(max-width:414px){
+        min-width: 200px;
       }
     }
     .right-layer{
@@ -2285,7 +2326,8 @@ section{
       background-size: cover;
       position: relative;
       @media(max-width:767px){
-        min-width: 25%;
+        min-width: 0;
+        flex-grow: 1;
       }
       &:after{
         position: absolute;
@@ -2312,6 +2354,10 @@ section{
     padding: 20px;
     @media(max-width:767px){
       margin: 35px auto 0;
+      margin-left: -160px;
+    }
+    @media(max-width:414px){
+      margin-left: -230px;
     }
     &:before{
       position: absolute;
@@ -2331,16 +2377,38 @@ section{
       width: 100%;
       height: 100%;
       padding-top: 68px;
+      @media(max-width:767px){
+        padding-left: 160px;
+        padding-top: 35px;
+      }
+      @media(max-width:414px){
+        padding-left: 230px;
+      }
       .book-ttl{
         font-size: 30px;
         color: #2a3352;
         text-transform: capitalize;
+        >br{
+          @media(min-width:768px){
+            display: none;
+          }
+        }
       }
       form.book-form{
         padding: 25px;
+        @media(max-width:767px){
+          padding: 25px 0;
+        }
+        @media(max-width:360px){
+          width: calc(100vw - 40px);
+        }
         .form-group{
           text-align: center;
           margin-bottom: 20px;
+          @media(max-width:767px){
+            text-align: left;
+            margin-bottom: 8px;
+          }
           label{
             font-size: 14px;
             font-weight: 300;
@@ -2356,6 +2424,10 @@ section{
             box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);
             @include inputPlacehoderColor(rgba(#2e3558,.5));
             padding: 6px 20px;
+            @media(max-width:767px){
+              height: 40px;
+              padding: 10px 12px;
+            }
           }
           .btn-warning{
             border-radius: 96px;
@@ -2368,9 +2440,20 @@ section{
             letter-spacing: 2.1px;
             color: #2a3352;
             display: inline-block;
+            @media(max-width: 767px){
+              float: right;
+            }
+            @media(max-width: 414px){
+              float: none;
+              display: block;
+              margin: 0 auto;
+            }
           }
           &.btn-wrap{
             padding-top: 26px;
+            @media(max-width: 767px){
+              padding-top: 40px;
+            }
           }
         }
       }
@@ -2398,6 +2481,11 @@ section{
         height: 230px;
         right: -60px;
         top: -123px;
+      }
+      @media(max-width:360px){
+        right: auto;
+        left: 115vw;
+        top: -140px;
       }
       &:after{
         position: absolute;
@@ -2713,6 +2801,7 @@ section{
       .result-block{
         display: flex;
         padding: 6px 0;
+        align-items: center;
         .carousel-wrap{
           width: 330px;
           position: relative;
@@ -2776,7 +2865,7 @@ section{
           }
         }
         .info-wrap{
-          padding: 20px 0;
+          // padding: 20px 0;
         }
         .info-inner{
           flex-grow: 1;
@@ -2856,7 +2945,8 @@ section{
               font-size: 18px;
               color: #2a3253;
               margin-bottom: 20px;
-              padding: 11px;
+              padding: 11px 3px;
+              white-space: nowrap;
             }
             .price{
               font-size: 24px;
@@ -3227,6 +3317,7 @@ footer.main-footer{
       }
       li{
         padding: 0 24px;
+        text-align: center;
         @media(max-width:767px){
           padding: 0 5px;
         }
