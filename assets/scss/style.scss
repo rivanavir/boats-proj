@@ -260,6 +260,11 @@ header.main-header{
           }
         }
       }
+      .head-sale-info,
+      .head-search-block,
+      .head-home-link{
+        display: none;
+      }
       .navbar-collapse{
         padding: 0;
         @media(min-width:992px){
