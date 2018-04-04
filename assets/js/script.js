@@ -67,8 +67,6 @@ $(document).ready(function(){
         }
       }
     ],
-    // prevHtml:'<div class="circle-arrow left"><i class="boat-arrow-left-icon"></i></div>',
-    // nextHtml:'<div class="circle-arrow right"><i class="boat-arrow-right-icon"></i></div>',
     addClass: 'boat-detail-wrap',
     slideMargin:0,
     enableDrag: false,
@@ -144,6 +142,15 @@ $(document).ready(function(){
       let sliderCounter = $(el).parents('.carousel-wrap');
       $(sliderCounter).find('span.current').text(el.getCurrentSlideCount());
     }
+  });
+
+  $('#searchSideToggler, #closeLink').on('click',function(e){
+    e.preventDefault();
+    $('#searchSidebar').toggleClass('side-open');
+  });
+
+  $('#bs-navbar-collapse-1').on('show.bs.collapse',function(){
+    $('#searchSidebar').removeClass('side-open');
   });
 
 });

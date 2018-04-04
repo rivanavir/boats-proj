@@ -683,17 +683,41 @@ header.main-header{
               background-color: #ffffff;
               box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);
               border-bottom: 0;
+              flex-grow: 1;
+              display: flex;
+              align-items: center;
               input{
                 background: transparent;
                 box-shadow: 0 0 0 transparent;
                 border: 0;
+                width: 100%;
+                flex-grow: 1;
+                line-height: 1.2;
+                padding: 7px 0 7px 15px;
+                font-size: 16px;
+                letter-spacing: 0.4px;
+                color: #606994;
               }
               a.search-btn{
-                i[class^=boat]{}
+                text-decoration: none;
+                min-width: 46px;
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                background-color: #fdb200;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                i[class^=boat]{
+                  font-size: 20px;
+                  color: #2a3352;
+                }
               }
             }
             .search-side-toggler{
               display: block;
+              min-width: 44px;
               width: 44px;
               height: 44px;
               border-radius: 50%;
@@ -2840,15 +2864,25 @@ section{
       max-height: 100%;
     }
     @media(max-width:767px){
+      padding-top: 12px;
       position: absolute;
       width: 342px;
       height: 100%;
       left: -342px;
+      z-index: 1500;
+      top: -132px;
     }
     @media(max-width:414px){
       width: 100%;
       height: 100%;
       left: -100%;
+    }
+    &.side-open{
+      @media(max-width:767px){
+        left: 0;
+      }
+      // @media(max-width:414px){
+      // }
     }
     &.mCustomScrollbar{
       .mCSB_scrollTools{
@@ -2872,6 +2906,7 @@ section{
     }
     @media(max-width:767px){
       width: 100%;
+      background-color: #f8f8f8;
     }
     .search-res-filter{
       border-bottom: 1px solid rgba(#2a3352,.25);
@@ -3201,8 +3236,24 @@ section{
         position: relative;
         right: -8px;
         margin-bottom: 14px;
+        text-decoration: none;
+        @media(max-width:767px){
+          width: 44px;
+          height: 44px;
+          padding: 0;
+          right: -14px;
+          background: #fff;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
         i[class^=boat]{
           color: white;
+          @media(max-width:767px){
+            color: #293152;
+          }
         }
       }
       a.reset-all{
