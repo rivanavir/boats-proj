@@ -46,7 +46,8 @@ $(document).ready(function(){
   $('#boatDetailGallery').lightSlider({
     gallery:true,
     item:1,
-    height: 730,
+    // height: 730,
+    height: '100vh',
     thumbContHeight: 183,
     thumbWidth: 235,
     thumbHeight: 160,
@@ -67,7 +68,7 @@ $(document).ready(function(){
         }
       }
     ],
-    addClass: 'boat-detail-wrap',
+    addClass: 'detail-boat-wrap',
     slideMargin:0,
     enableDrag: false,
     currentPagerPosition:'left',
@@ -79,8 +80,8 @@ $(document).ready(function(){
         selector: '#boatDetailGallery .lslide'
       });
 
-      $('.boat-detail-wrap').append(controlHtml, counterHtml);
-      $('.boat-detail-wrap .circle-arrow').on('click', function(e){
+      $('.detail-boat-wrap').append(controlHtml, counterHtml);
+      $('.detail-boat-wrap .circle-arrow').on('click', function(e){
         e.preventDefault();
         if($(this).hasClass('left')){
           el.goToPrevSlide();
@@ -128,9 +129,17 @@ $(document).ready(function(){
   }
 
   $('.search-res-carousel').lightSlider({
-    item:1,
+    item:2,
     slideMargin:0,
     pager: false,
+    responsive : [
+      {
+        breakpoint:1440,
+        settings: {
+          item:1
+        }
+      }
+    ],
     prevHtml:'<i class="boat-arrow-left-icon"></i>',
     nextHtml:'<i class="boat-arrow-right-icon"></i>',
     onSliderLoad: function (el) {
