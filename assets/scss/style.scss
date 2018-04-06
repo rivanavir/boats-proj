@@ -2245,8 +2245,14 @@ section{
           a{
             img{
               height: 160px;
-              // height: 100%;
+              width: 100%;
               object-fit: cover;
+              @media(max-width: 767px){
+                height: 120px;
+              }
+              @media(max-width: 414px){
+                height: 80px;
+              }
             }
           }
           &.active,

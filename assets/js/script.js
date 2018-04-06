@@ -56,13 +56,13 @@ $(document).ready(function(){
     thumbItem:9,
     responsive : [
       {
-        breakpoint:991,
+        breakpoint:1330,
         settings: {
           thumbItem:6
         }
       },
       {
-        breakpoint:575,
+        breakpoint:991,
         settings: {
           thumbItem:4
         }
