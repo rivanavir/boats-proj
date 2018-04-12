@@ -3038,8 +3038,14 @@ section{
           position: relative;
         }
         .carousel-wrap{
-          width: 660px;
+          width: 1320px;
           position: relative;
+          @media(max-width:2560px){
+            width: 990px;
+          }
+          @media(max-width:2100px){
+            width: 660px;
+          }
           @media(max-width:1660px){
             width: 440px;
           }
@@ -3115,6 +3121,7 @@ section{
         }
         .info-wrap{
           // padding: 20px 0;
+          flex-grow: 1;
         }
         .info-inner{
           flex-grow: 1;

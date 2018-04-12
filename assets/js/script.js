@@ -129,11 +129,21 @@ $(document).ready(function(){
   }
 
   $('.search-res-carousel').lightSlider({
-    item:2,
+    item:4,
     slideMargin:0,
     pager: false,
     responsive : [
       {
+        breakpoint:2560,
+        settings: {
+          item:3
+        }
+      },{
+        breakpoint:2100,
+        settings: {
+          item:2
+        }
+      },{
         breakpoint:1440,
         settings: {
           item:1
