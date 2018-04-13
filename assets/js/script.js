@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  
   // custom scroll
   let getSroll = function(){
     if($(window).outerWidth() > 991){
@@ -34,15 +33,35 @@ $(document).ready(function(){
       }
     }
   });
-  
 
-  $("#featureCarouselWrap").AnimatedSlider( { 
-    prevButton: "#btn_prev2", 
-    nextButton: "#btn_next2",
-    visibleItems: 7,
-    infiniteScroll: true,
+  // $("#featureCarouselWrap").AnimatedSlider( { 
+  //   prevButton: "#btn_prev2", 
+  //   nextButton: "#btn_next2",
+  //   visibleItems: 5,
+  //   infiniteScroll: true,
+  // });
+
+  var carousel = $("#featureCarouselWrap").flipster({
+    style: 'flat',
+    spacing: -0.2,
+    // spacing: -0.5,
+    nav: true,
+    buttons:   true,
+    loop: true,
   });
-  
+
+  $('#btn_prev').on('click', function (e) {
+    e.preventDefault();
+    carousel.prev();
+    return false
+  });
+
+  $('#btn_next').on('click', function (e) {
+    e.preventDefault();
+    carousel.next();
+    return false;
+  });
+
   $('#boatDetailGallery').lightSlider({
     gallery:true,
     item:1,
@@ -53,6 +72,7 @@ $(document).ready(function(){
     thumbHeight: 160,
     thumbMargin: 0,
     controls: false,
+    // pager: true,
     thumbItem:9,
     responsive : [
       {
@@ -100,12 +120,9 @@ $(document).ready(function(){
       $(sliderCounter).find('span.current').text(el.getCurrentSlideCount());
     }
   });
-  
   // range slider
   if($('#priceRangeSlider')){
-
     var priceSlider = document.getElementById('priceRangeSlider');
-    
     noUiSlider.create(priceSlider, {
       start: [ 299, 2299 ],
       connect: true,
@@ -115,10 +132,8 @@ $(document).ready(function(){
         'max': 3000
       }
     });
-    
     var paddingMin = document.getElementById('sliderValueMin'),
     paddingMax = document.getElementById('sliderValueMax');
-    
     priceSlider.noUiSlider.on('update', function ( values, handle ) {
       if ( handle ) {
         paddingMax.value = values[handle];
@@ -127,7 +142,6 @@ $(document).ready(function(){
       }
     });
   }
-
   $('.search-res-carousel').lightSlider({
     item:4,
     slideMargin:0,
@@ -162,12 +176,10 @@ $(document).ready(function(){
       $(sliderCounter).find('span.current').text(el.getCurrentSlideCount());
     }
   });
-
   $('#searchSideToggler, #closeLink').on('click',function(e){
     e.preventDefault();
     $('#searchSidebar').toggleClass('side-open');
   });
-
   $('#bs-navbar-collapse-1').on('show.bs.collapse',function(){
     $('#searchSidebar').removeClass('side-open');
   });

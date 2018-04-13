@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./assets/css/lightslider.min.css" />
   <link rel="stylesheet" href="./assets/css/jquery.mCustomScrollbar.css" />
   <link rel="stylesheet" href="./assets/css/nouislider.min.css" />
-  <link rel="stylesheet" href="./assets/css/animated-slider.css">
+  <link rel="stylesheet" href="./assets/css/jquery.flipster.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Boats - home page</title>
 </head>
@@ -296,7 +296,7 @@
       </div>
     </div>
 
-    <!-- <section class="feature-boat-section">
+    <section class="feature-boat-section">
       <div class="section-ttl-block with-bg">
         <div class="ttl-inner">
           Featured<br>Boats
@@ -312,7 +312,8 @@
         </div>
       </div>
       <div class="feature-carousel-wrapper choose_slider_items">
-        <ul id="featureCarouselWrap">
+        <div id="featureCarouselWrap">
+        <ul class="flip-items">
           <li class="current_item">
             <div class="circle-figure-block">
               <div class="block-figure">
@@ -458,10 +459,11 @@
             </div>
           </li>
         </ul>
-        <div class="controls"><a id="btn_next2" href="#">Next</a></div>
-        <div class="controls"><a id="btn_prev2" href="#">Previous</a></div>
       </div>
-    </section> -->
+        <div class="controls"><a class="prev-control" id="btn_prev" href="#">Previous</a></div>
+        <div class="controls"><a class="next-control" id="btn_next" href="#">Next</a></div>
+      </div>
+    </section>
     
     <section class="our-brand">
       <div class="our-brand-inner">
@@ -733,6 +735,7 @@
   <script src="./assets/js/nouislider.min.js"></script>
 
   <script src="./assets/js/jquery.cssslider.min.js"></script>
+  <script src="./assets/js/jquery.flipster.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
