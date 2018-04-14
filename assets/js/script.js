@@ -43,9 +43,7 @@ $(document).ready(function(){
 
   var carousel = $("#featureCarouselWrap").flipster({
     style: 'flat',
-    spacing: -0.2,
-    // spacing: -0.5,
-    nav: true,
+    spacing: -0.4,
     buttons:   true,
     loop: true,
   });
