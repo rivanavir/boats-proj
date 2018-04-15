@@ -41,12 +41,29 @@ $(document).ready(function(){
   //   infiniteScroll: true,
   // });
 
-  var carousel = $("#featureCarouselWrap").flipster({
+  var featureFlat = $("#featureCarouselWrap").flipster({
     style: 'flat',
     spacing: -0.4,
     buttons:   true,
     loop: true,
+    buttons: false,
+    onItemSwitch: function(el){
+      // console.log(featureFlat);
+      // featureFlat.flipster('index');
+    }
   });
+  $('.flipster__button').on("click", function(e){
+    console.log(featureFlat);
+    e.preventDefault();
+    if($(this).hasClass('button--prev')){
+      featureFlat.flipster('prev');
+    }
+    if($(this).hasClass('button--next')){
+      featureFlat.flipster('next');
+    }
+  })
+
+
 
   $('#btn_prev').on('click', function (e) {
     e.preventDefault();
