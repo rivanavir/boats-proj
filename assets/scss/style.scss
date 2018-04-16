@@ -2460,6 +2460,7 @@ section{
 				}
 				.det-txt{
 					padding: 0 55px 20px 0;
+					max-width: 720px;
 					@media(max-width:1250px){
 						padding: 0 0 10px 0;
 					}
@@ -2594,7 +2595,7 @@ section{
 				}
 				.circle-arrow{
 					position: absolute;
-					bottom: 7%;
+					bottom: 65px;
 					cursor: pointer;
 					background: rgba(255,255,255,.7);
 					@media(max-width:1024px){
